@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- canvas Tag -->
+
+    <div class="toolBar">
+        <div class="tool ">
+            <img src="download (1).svg"
+             class="tool-img " id="pencil-img" alt="" 
+             onclick="handleToolChange('pencil')">
+            <div class="tool-options pencil">
+                <div class="pencil-size" >
+ <input type="range"  id="pen-size" min="5" max="30" value="5">
+                </div>
+                <div class="pencil-color">
+                    <div class="colors red" onclick="handleColorChange('red')"></div>
+                    <div class="colors green" onclick="handleColorChange('green')"></div>
+                    <div class="colors blue" onclick="handleColorChange('blue')"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="download (4).svg" alt="" class="tool-img"  id="eraser-img" onclick="handleToolChange('eraser')">
+            <div class="tool-options eraser">
+                <div class="eraser-size" >
+ <input type="range"  id="eraser-size" min="5" max=30>
+                </div>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="stickyimg.svg" alt="" 
+            onclick="handleToolChange('sticky')" class="tool-img" >
+        </div>
+        <div class="tool">
+            <input type="file" accept = "file_extension|image/*" class="image-upload">
+            <!-- <img src = "photo.svg" alt = ""> -->
+        </div>
+        <div class="tool">
+            <img src="download (5).svg" class="tool-img imagepicker" >
+        </div>
+        <div class="tool">
+            <img src="download (6).svg" class="tool-img undo">
+        </div>
+        <div class="tool">
+            <img src="download (7).svg" class="tool-img redo">
+        </div>
+        <div class="tool">
+            <img src="download (8).svg" class=" tool-img zoomin">
+        </div>
+        <div class="tool">
+            <img src="download (8).svg" class="tool-img zoomout">
+        </div>
+        <div class="tool">
+            <img src="download (9).svg" class="tool-img download ">
+        </div>
+        <div>
+            <a class="dbutton">Save as Image</a>        
+        </div>
+    </div>
+    <!-- notes dom create -->
+    <canvas class="board mcanvas">
+    </canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" crossorigin></script>
+
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+    <script src="sticky.js"></script>
+    <script src="upload.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+    <script src="reciever.js"></script>
+
+
+</body>
+
+</html>
